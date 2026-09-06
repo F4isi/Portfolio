@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Primary Meta Tags -->
+  <title>Faisal Noushad — Unity Game Developer & Gameplay Programmer</title>
+  <meta name="title" content="Faisal Noushad — Unity Game Developer & Gameplay Programmer" />
+  <meta name="description" content="Portfolio of Faisal Noushad, Unity Game Developer specialized in C#, 2D/3D gameplay mechanics, Minimax game AI, vehicle physics, and WebGL optimization." />
+  <meta name="keywords" content="Unity Game Developer, Gameplay Programmer, C# Developer, Unity 3D, Unity 2D, Game AI, Minimax AI, Spider Solitaire Unity, City Rider, Faisal Noushad" />
+  <meta name="author" content="Faisal Noushad" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://devfaisaln.itch.io/" />
+  <meta property="og:title" content="Faisal Noushad — Unity Game Developer Portfolio" />
+  <meta property="og:description" content="Explore shipped 2D, 3D, and WebGL games, technical case studies, Minimax AI, and gameplay systems built in Unity & C#." />
+  <meta property="og:image" content="assets/images/city-rider.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://devfaisaln.itch.io/" />
+  <meta property="twitter:title" content="Faisal Noushad — Unity Game Developer Portfolio" />
+  <meta property="twitter:description" content="Explore shipped 2D, 3D, and WebGL games, technical case studies, Minimax AI, and gameplay systems built in Unity & C#." />
+  <meta property="twitter:image" content="assets/images/city-rider.png" />
+
+  <!-- Favicon (Game Controller SVG) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300f2fe'><path d='M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm3-3c-.83 0-1.5-.67-1.5-1.5S17.67 9 18.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z'/></svg>" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Ambient Particle Canvas & Background Glow -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="ambient-glow glow-top-right"></div>
+  <div class="ambient-glow glow-mid-left"></div>
+
+  <!-- ==========================================================================
+       Navigation Bar
+       ========================================================================== -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-logo" aria-label="Faisal Noushad Home">
+        <div class="nav-logo-icon">🎮</div>
+        <span>Faisal.dev</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#featured-projects" class="nav-link">Featured Work</a></li>
+          <li><a href="#all-games" class="nav-link">All Games</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="assets/resume/Faisal_Noushad_Unity_Developer_Resume.pdf" download="Faisal_Noushad_Unity_Developer_Resume.pdf" class="btn btn-outline-cyan btn-sm">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          Resume
+        </a>
+        <button class="mobile-toggle" aria-label="Toggle Menu" aria-expanded="false">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         Hero Section
+         ========================================================================== -->
+    <section id="hero" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-status-badge">
+            <span class="status-dot"></span>
+            Available for Unity & Gameplay Programming Roles
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Faisal Noushad</span>
+          </h1>
+
+          <div class="hero-role">
+            <span>Unity Game Developer</span>
+            <span class="hero-role-pipe">|</span>
+            <span style="color: var(--text-muted); font-size: 1.15rem; font-weight: 500;">C# & Gameplay Systems</span>
+          </div>
+
+          <p class="hero-bio">
+            Unity Game Developer with shipped experience across <strong>2D, 3D, and WebGL</strong> — from card architectures and vehicle physics to Minimax AI and gameplay prototypes. Dedicated to tight game feel, performance optimization, and clean, modular C# code.
+          </p>
+
+          <div class="hero-tags">
+            <span class="hero-tag">#Unity3D</span>
+            <span class="hero-tag">#Unity2D</span>
+            <span class="hero-tag">#CSharp</span>
+            <span class="hero-tag">#GameAI</span>
+            <span class="hero-tag">#VehiclePhysics</span>
+            <span class="hero-tag">#DOTween</span>
+            <span class="hero-tag">#WebGL</span>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#featured-projects" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+              Explore Projects
+            </a>
+            <a href="assets/resume/Faisal_Noushad_Unity_Developer_Resume.pdf" download="Faisal_Noushad_Unity_Developer_Resume.pdf" class="btn btn-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              Download CV
+            </a>
+            <a href="#contact" class="btn btn-outline-cyan">
+              Get in Touch
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <a href="https://github.com/F4isi" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub Profile" title="GitHub Profile">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://devfaisaln.itch.io/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Itch.io Portfolio" title="Itch.io Portfolio">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M2.99 1.365C1.988 2.003 0 4.426 0 5.06v1.052C0 7.447 1.246 8.618 2.377 8.618c1.358 0 2.49-1.125 2.49-2.462 0 1.337 1.093 2.462 2.452 2.462 1.358 0 2.416-1.125 2.416-2.462 0 1.337 1.162 2.462 2.52 2.462h.025c1.358 0 2.52-1.125 2.52-2.462 0 1.337 1.058 2.462 2.417 2.462 1.358 0 2.451-1.125 2.451-2.462 0 1.337 1.132 2.462 2.49 2.462 1.132 0 2.378-1.171 2.378-2.505V5.06c-.02-.635-1.988-3.058-2.99-3.695C18.012.197 15.706 0 12.268 0 8.831.003 4.143.54 2.99 1.365zM12 11.2a2.8 2.8 0 0 1 2.8 2.8 2.8 2.8 0 0 1-2.8 2.8 2.8 2.8 0 0 1-2.8-2.8A2.8 2.8 0 0 1 12 11.2z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/faisal-n-706250228/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn Profile" title="LinkedIn Profile">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-media-wrapper">
+          <div class="hero-floating-badge">
+            <span style="color: var(--accent-cyan);">⚡</span>
+            <span>Unity 2022 / 6 Ready</span>
+          </div>
+
+          <div class="hero-media-card">
+            <div class="hero-image-box">
+              <img src="assets/images/profile.jpeg" alt="Faisal Noushad — Unity Game Developer" />
+              <div class="hero-image-gradient"></div>
+            </div>
+            <div class="hero-card-meta">
+              <div class="meta-name">Faisal Noushad</div>
+              <div class="meta-title">Associate Game Developer & C# Specialist</div>
+              <div class="meta-stats">
+                <div class="meta-stat-item">
+                  <span class="stat-label">Specialties</span>
+                  <span class="stat-val">Gameplay • AI • Feel</span>
+                </div>
+                <div class="meta-stat-item">
+                  <span class="stat-label">Location</span>
+                  <span class="stat-val">Kollam, Kerala</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         About Section
+         ========================================================================== -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">Passion for Systems & Player Feel</h2>
+          <p class="section-subtitle">
+            Bridging programming architecture, mathematical game rules, and responsive player feedback.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I am a <strong>Unity Game Developer</strong> with practical, end-to-end experience spanning 2D, 3D, and WebGL titles. Having recently worked at <strong>Infocom Software Private Limited</strong> on a production solitaire mobile game, I owned the animation layer and tackled complex engine challenges from prototype to playtest.
+            </p>
+            <p>
+              My development philosophy focuses on building <strong>clean, decoupled C# systems</strong> while maintaining obsessive attention to "game feel" — tactile feedback, smooth tweening, crisp audio cues, and responsive controls.
+            </p>
+            <p>
+              Beyond commercial work, I have shipped standalone WebGL experiences, mentored junior developers on Unity architecture, and conducted technical workshops on game development.
+            </p>
+            <div style="margin-top: 1.5rem;">
+              <a href="#contact" class="btn btn-outline-cyan btn-sm">Let's Build Something Great ↗</a>
+            </div>
+          </div>
+
+          <div class="about-cards-grid">
+            <div class="about-highlight-card">
+              <div class="card-icon">🎯</div>
+              <h3 class="about-card-title">Prototype to Playtest</h3>
+              <p class="about-card-desc">Experience owning feature branches, conducting structured playtests, and diagnosing timing & UX inconsistencies.</p>
+            </div>
+
+            <div class="about-highlight-card">
+              <div class="card-icon">🧠</div>
+              <h3 class="about-card-title">Game AI & Logic</h3>
+              <p class="about-card-desc">Proficient in Minimax decision algorithms, heuristic evaluation, and state-machine patrol/chase systems.</p>
+            </div>
+
+            <div class="about-highlight-card">
+              <div class="card-icon">🏎️</div>
+              <h3 class="about-card-title">Physics & Controls</h3>
+              <p class="about-card-desc">Engineered two-wheeled vehicle balance, wheel physics, inertial screen wrapping, and recoil mechanics.</p>
+            </div>
+
+            <div class="about-highlight-card">
+              <div class="card-icon">⚡</div>
+              <h3 class="about-card-title">Engine Optimization</h3>
+              <p class="about-card-desc">Skilled in object pooling, memory leak troubleshooting, GUID conflict resolution, and WebGL optimization.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Featured Case Studies Section
+         ========================================================================== -->
+    <section id="featured-projects" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Case Studies</span>
+          <h2 class="section-title">Featured Game Projects</h2>
+          <p class="section-subtitle">
+            In-depth breakdowns of architecture, technical challenges, and playable browser demonstrations.
+          </p>
+        </div>
+
+        <div class="case-studies-container">
+          <!-- Project 1: Spider Solitaire -->
+          <article class="case-study-card">
+            <div class="case-study-media">
+              <img src="assets/images/spider-solitaire.png" alt="Spider Solitaire Unity Gameplay" loading="lazy" />
+              <div class="case-study-badge-overlay">
+                <span class="badge badge-cyan">Unity WebGL</span>
+                <span class="badge">Card Systems</span>
+              </div>
+            </div>
+            <div class="case-study-content">
+              <div class="case-study-genre">Logic Puzzle • Card Architecture</div>
+              <h3 class="case-study-title">Spider Solitaire</h3>
+              <p class="case-study-tagline">
+                Classic card game recreated with full tableau column management, King-to-Ace descending sequence rules, and responsive WebGL performance.
+              </p>
+              <ul class="case-study-features">
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Multi-card stacked dragging maintaining parent-child hierarchy
+                </li>
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Dynamic sequence validation and celebration animations
+                </li>
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Smooth DOTween dealing, auto-snapping, and state evaluation
+                </li>
+              </ul>
+              <div class="case-study-tech-list">
+                <span class="badge">C#</span>
+                <span class="badge">Unity UI</span>
+                <span class="badge">DOTween</span>
+                <span class="badge">Tableau Manager</span>
+              </div>
+              <div class="case-study-actions">
+                <button class="btn btn-outline-cyan btn-sm open-case-study-btn" data-id="spider-solitaire">
+                  Technical Breakdown
+                </button>
+                <a href="https://devfaisaln.itch.io/spider-solitaire" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  Play in Browser ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: City Rider (Reversed Layout) -->
+          <article class="case-study-card reversed">
+            <div class="case-study-media">
+              <img src="assets/images/city-rider.png" alt="City Rider 3D Motorcycle Unity" loading="lazy" />
+              <div class="case-study-badge-overlay">
+                <span class="badge badge-cyan">Unity 3D</span>
+                <span class="badge">Vehicle Physics</span>
+              </div>
+            </div>
+            <div class="case-study-content">
+              <div class="case-study-genre">3D Vehicle Simulator • Physics Controller</div>
+              <h3 class="case-study-title">City Rider</h3>
+              <p class="case-study-tagline">
+                Interactive 3D motorcycle driving simulation featuring custom two-wheeled vehicle physics, responsive lean curves, and urban city exploration.
+              </p>
+              <ul class="case-study-features">
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Custom motorcycle balance controller with gyroscopic stabilization
+                </li>
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Speed-scaled vehicle lean angles and dynamic camera damping
+                </li>
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Tuned wheel collider friction for natural traction, drift, and braking
+                </li>
+              </ul>
+              <div class="case-study-tech-list">
+                <span class="badge">C#</span>
+                <span class="badge">Rigidbody Physics</span>
+                <span class="badge">Wheel Colliders</span>
+                <span class="badge">3D City Environment</span>
+              </div>
+              <div class="case-study-actions">
+                <button class="btn btn-outline-cyan btn-sm open-case-study-btn" data-id="city-rider">
+                  Technical Breakdown
+                </button>
+                <a href="https://devfaisaln.itch.io/city-rider" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  Play in Browser ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Chess -->
+          <article class="case-study-card">
+            <div class="case-study-media">
+              <img src="assets/images/chess.png" alt="Chess Minimax AI Unity" loading="lazy" />
+              <div class="case-study-badge-overlay">
+                <span class="badge badge-cyan">Adaptive AI</span>
+                <span class="badge">Turn-Based Strategy</span>
+              </div>
+            </div>
+            <div class="case-study-content">
+              <div class="case-study-genre">Strategy • Game AI Architecture</div>
+              <h3 class="case-study-title">Chess — Adaptive AI & Mechanics</h3>
+              <p class="case-study-tagline">
+                Modern Chess built in Unity featuring full move verification, 3 distinct AI difficulty tiers (Random, Heuristic, Minimax), and timer management.
+              </p>
+              <ul class="case-study-features">
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  3 AI difficulty tiers: Random Explorer, Heuristic Hunter, and Minimax
+                </li>
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Smooth piece movement animations powered by DOTween
+                </li>
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Centralized Audio Manager triggering contextual soundscapes
+                </li>
+              </ul>
+              <div class="case-study-tech-list">
+                <span class="badge">C#</span>
+                <span class="badge">Minimax Algorithm</span>
+                <span class="badge">DOTween</span>
+                <span class="badge">Board Matrix</span>
+              </div>
+              <div class="case-study-actions">
+                <button class="btn btn-outline-cyan btn-sm open-case-study-btn" data-id="chess">
+                  Technical Breakdown
+                </button>
+                <a href="https://devfaisaln.itch.io/chess" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  Play in Browser ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Asteroids (Reversed Layout) -->
+          <article class="case-study-card reversed">
+            <div class="case-study-media">
+              <img src="assets/images/asteroids-thumb.png" alt="Asteroids Unity Arcade" loading="lazy" />
+              <div class="case-study-badge-overlay">
+                <span class="badge badge-cyan">2D Physics</span>
+                <span class="badge">Retro Arcade</span>
+              </div>
+            </div>
+            <div class="case-study-content">
+              <div class="case-study-genre">2D Arcade • Physics & Spawning</div>
+              <h3 class="case-study-title">Asteroids Arcade</h3>
+              <p class="case-study-tagline">
+                Space-themed arcade shooter with authentic Newtonian spaceship inertia, toroidal screen wrapping, and multi-stage asteroid fragmentation.
+              </p>
+              <ul class="case-study-features">
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Newtonian physics: thrust acceleration, rotational damping, zero-G drift
+                </li>
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Seamless toroidal screen wrapping teleporting objects across boundaries
+                </li>
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Object pooling for laser projectiles and fragment particle bursts
+                </li>
+              </ul>
+              <div class="case-study-tech-list">
+                <span class="badge">C#</span>
+                <span class="badge">Rigidbody2D</span>
+                <span class="badge">Screen Wrap</span>
+                <span class="badge">Object Pooling</span>
+              </div>
+              <div class="case-study-actions">
+                <button class="btn btn-outline-cyan btn-sm open-case-study-btn" data-id="asteroids">
+                  Technical Breakdown
+                </button>
+                <a href="https://devfaisaln.itch.io/asteroids" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  Play in Browser ↗
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         All Games & Prototypes (Filterable Grid)
+         ========================================================================== -->
+    <section id="all-games" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Showcase</span>
+          <h2 class="section-title">All Games & Prototypes</h2>
+          <p class="section-subtitle">
+            Explore interactive prototypes, AI simulations, and playable WebGL releases.
+          </p>
+        </div>
+
+        <div class="filter-tabs">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="featured">Featured</button>
+          <button class="filter-btn" data-filter="3d">3D & Physics</button>
+          <button class="filter-btn" data-filter="2d">2D & WebGL</button>
+          <button class="filter-btn" data-filter="ai">AI Systems</button>
+        </div>
+
+        <div id="games-grid" class="games-grid">
+          <!-- Populated dynamically via js/main.js from PROJECTS_DATA -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Technical Skills Section
+         ========================================================================== -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Competencies</span>
+          <h2 class="section-title">Technical Skills & Toolkit</h2>
+          <p class="section-subtitle">
+            Hands-on technologies and architecture patterns validated through shipped projects.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Category 1: Engine -->
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-cat-icon">🎮</div>
+              <h3 class="skill-category-title">Game Engine</h3>
+            </div>
+            <div class="skills-pill-list">
+              <span class="skill-pill">Unity 2D</span>
+              <span class="skill-pill">Unity 3D</span>
+              <span class="skill-pill">Unity UI (uGUI)</span>
+              <span class="skill-pill">Animator & Timeline</span>
+              <span class="skill-pill">WebGL Deployment</span>
+              <span class="skill-pill">DOTween Pro</span>
+              <span class="skill-pill">Addressables</span>
+            </div>
+          </div>
+
+          <!-- Category 2: Programming & Architecture -->
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-cat-icon">💻</div>
+              <h3 class="skill-category-title">Programming & Patterns</h3>
+            </div>
+            <div class="skills-pill-list">
+              <span class="skill-pill">C#</span>
+              <span class="skill-pill">Object-Oriented Design</span>
+              <span class="skill-pill">ScriptableObjects</span>
+              <span class="skill-pill">Object Pooling</span>
+              <span class="skill-pill">Coroutines</span>
+              <span class="skill-pill">Finite State Machines</span>
+              <span class="skill-pill">Event-Driven Architecture</span>
+            </div>
+          </div>
+
+          <!-- Category 3: Physics & Game Feel -->
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-cat-icon">⚙️</div>
+              <h3 class="skill-category-title">Physics & Game Feel</h3>
+            </div>
+            <div class="skills-pill-list">
+              <span class="skill-pill">3D Vehicle Physics</span>
+              <span class="skill-pill">Wheel Colliders</span>
+              <span class="skill-pill">Rigidbody 2D / 3D</span>
+              <span class="skill-pill">Raycast Systems</span>
+              <span class="skill-pill">Screen Wrapping</span>
+              <span class="skill-pill">Particle VFX</span>
+              <span class="skill-pill">Juice & Screen Shake</span>
+            </div>
+          </div>
+
+          <!-- Category 4: Game AI -->
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-cat-icon">🤖</div>
+              <h3 class="skill-category-title">Game AI & Logic</h3>
+            </div>
+            <div class="skills-pill-list">
+              <span class="skill-pill">Minimax Algorithm</span>
+              <span class="skill-pill">Heuristic Board Scoring</span>
+              <span class="skill-pill">NavMesh Pathfinding</span>
+              <span class="skill-pill">Patrol / Chase / Attack</span>
+              <span class="skill-pill">Board-State Validation</span>
+              <span class="skill-pill">Turn Timers</span>
+            </div>
+          </div>
+
+          <!-- Category 5: Tools & Workflow -->
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-cat-icon">🛠️</div>
+              <h3 class="skill-category-title">Tools & Workflow</h3>
+            </div>
+            <div class="skills-pill-list">
+              <span class="skill-pill">Visual Studio</span>
+              <span class="skill-pill">Git / GitHub</span>
+              <span class="skill-pill">Unity Collab</span>
+              <span class="skill-pill">Unity Profiler</span>
+              <span class="skill-pill">Discord</span>
+              <span class="skill-pill">Google Docs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Work Experience Section
+         ========================================================================== -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Experience</span>
+          <h2 class="section-title">Professional Journey</h2>
+          <p class="section-subtitle">
+            Proven track record working in game studio pipelines and freelance client deliverables.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <h3 class="timeline-role">Associate Game Developer</h3>
+                <span class="timeline-period">Nov 2025 — Apr 2026</span>
+              </div>
+              <div class="timeline-company">Infocom Software Private Limited • Kochi, Kerala</div>
+              <ul class="timeline-points">
+                <li>Implemented and owned the complete animation layer for a mobile solitaire title, collaborating closely in a multidisciplinary team from prototype to playtest.</li>
+                <li>Conducted structured playtesting sessions to identify game feel issues, animation timing bottlenecks, and UX inconsistencies prior to build submissions.</li>
+                <li>Mentored junior developers on Unity architecture, ScriptableObject workflows, and C# coding standards.</li>
+                <li>Diagnosed and eliminated UI performance bottlenecks, memory leaks, and version-control asset GUID conflicts.</li>
+                <li>Conducted a technical workshop on Unity game development at MES College of Engineering and Technology.</li>
+              </ul>
+              <div class="timeline-skills-used">
+                <span class="badge badge-cyan">Unity Mobile</span>
+                <span class="badge">Animation Layer</span>
+                <span class="badge">DOTween</span>
+                <span class="badge">Playtesting</span>
+                <span class="badge">Optimization</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <h3 class="timeline-role">Freelance Unity Developer</h3>
+                <span class="timeline-period">Nov 2025 — Present</span>
+              </div>
+              <div class="timeline-company">Self-Employed • Remote</div>
+              <ul class="timeline-points">
+                <li>Engineered and shipped multiple Unity 3D prototypes across diverse genres (courier simulators, puzzle titles, and arcade games) for different clients end-to-end.</li>
+                <li>Tuned player movement, physics interactions, and collision feel to hit the specific aesthetic and responsiveness requested by clients.</li>
+                <li>Managed client communication, iterative build reviews, and feedback cycles independently using Discord and collaborative documentation.</li>
+              </ul>
+              <div class="timeline-skills-used">
+                <span class="badge badge-cyan">Unity 3D</span>
+                <span class="badge">Client Prototypes</span>
+                <span class="badge">Physics Tuning</span>
+                <span class="badge">End-to-End Delivery</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Education Section
+         ========================================================================== -->
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Education</span>
+          <h2 class="section-title">Education & Training</h2>
+          <p class="section-subtitle">
+            Formal game development training and foundational academic background.
+          </p>
+        </div>
+
+        <div class="education-grid">
+          <div class="edu-card">
+            <div class="edu-icon">🎓</div>
+            <div class="edu-body">
+              <h3>Diploma in Unity Game Development</h3>
+              <div class="edu-institution">Big Boy School of Gaming, Kochi</div>
+              <div class="edu-duration">Oct 2024 — Apr 2026</div>
+              <p class="edu-desc">
+                Intensive hands-on curriculum covering Unity 2D, Unity 3D, C# gameplay architecture, game feel systems, particle VFX, and multiple shipped project builds.
+              </p>
+            </div>
+          </div>
+
+          <div class="edu-card">
+            <div class="edu-icon">🏛️</div>
+            <div class="edu-body">
+              <h3>Bachelor of Commerce (Computer Applications)</h3>
+              <div class="edu-institution">University Institute of Technology, Mulankadakam, Kollam</div>
+              <div class="edu-duration">Pursuing</div>
+              <p class="edu-desc">
+                Undergraduate degree combining software applications, business logic, computing principles, and computational foundations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Contact Section
+         ========================================================================== -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="contact-wrapper">
+          <div class="contact-info-col">
+            <span class="section-tag">Contact</span>
+            <h3>Let's Build Games Together</h3>
+            <p>
+              I am actively looking for opportunities as a <strong>Unity Game Developer</strong>, <strong>Gameplay Programmer</strong>, or <strong>C# Developer</strong>. Whether you have a full-time role, contract project, or prototype in mind, feel free to reach out!
+            </p>
+
+            <div class="contact-methods">
+              <div class="contact-method-item">
+                <div class="method-icon">✉️</div>
+                <div class="method-details">
+                  <div class="method-label">Direct Email</div>
+                  <div class="method-value">
+                    faisalnoushad11@gmail.com
+                    <button type="button" id="copy-email-btn" class="copy-email-btn" title="Copy to clipboard">
+                      📋 Copy
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-method-item">
+                <div class="method-icon">📍</div>
+                <div class="method-details">
+                  <div class="method-label">Location</div>
+                  <div class="method-value">Kollam, Kerala, India (Open to Remote / Relocation)</div>
+                </div>
+              </div>
+
+              <div class="contact-method-item">
+                <div class="method-icon">📄</div>
+                <div class="method-details">
+                  <div class="method-label">Resume / CV</div>
+                  <div class="method-value">
+                    <a href="assets/resume/Faisal_Noushad_Unity_Developer_Resume.pdf" download="Faisal_Noushad_Unity_Developer_Resume.pdf" style="color: var(--accent-cyan); text-decoration: underline;">
+                      Download Faisal_Noushad_Resume.pdf ↗
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-socials">
+              <a href="https://github.com/F4isi" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+              <a href="https://devfaisaln.itch.io/" target="_blank" rel="noopener noreferrer" class="social-link" title="Itch.io">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M2.99 1.365C1.988 2.003 0 4.426 0 5.06v1.052C0 7.447 1.246 8.618 2.377 8.618c1.358 0 2.49-1.125 2.49-2.462 0 1.337 1.093 2.462 2.452 2.462 1.358 0 2.416-1.125 2.416-2.462 0 1.337 1.162 2.462 2.52 2.462h.025c1.358 0 2.52-1.125 2.52-2.462 0 1.337 1.058 2.462 2.417 2.462 1.358 0 2.451-1.125 2.451-2.462 0 1.337 1.132 2.462 2.49 2.462 1.132 0 2.378-1.171 2.378-2.505V5.06c-.02-.635-1.988-3.058-2.99-3.695C18.012.197 15.706 0 12.268 0 8.831.003 4.143.54 2.99 1.365zM12 11.2a2.8 2.8 0 0 1 2.8 2.8 2.8 2.8 0 0 1-2.8 2.8 2.8 2.8 0 0 1-2.8-2.8A2.8 2.8 0 0 1 12 11.2z"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/faisal-n-706250228/" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <form id="contact-form" class="contact-form">
+            <div id="form-status" class="form-status"></div>
+
+            <div class="form-group">
+              <label for="sender-name" class="form-label">Your Name</label>
+              <input type="text" id="sender-name" class="form-input" placeholder="e.g. Alex Hunter" required />
+            </div>
+
+            <div class="form-group">
+              <label for="sender-email" class="form-label">Email Address</label>
+              <input type="email" id="sender-email" class="form-input" placeholder="alex@studio.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="sender-subject" class="form-label">Subject</label>
+              <input type="text" id="sender-subject" class="form-input" placeholder="Unity Developer Role / Project Inquiry" />
+            </div>
+
+            <div class="form-group">
+              <label for="sender-message" class="form-label">Message</label>
+              <textarea id="sender-message" class="form-textarea" placeholder="Hello Faisal, we are interested in your Unity and gameplay development work..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              Send Message 🚀
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       Project Detail Modal (Case Study Viewer)
+       ========================================================================== -->
+  <div id="project-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-container">
+      <button id="modal-close-btn" class="modal-close-btn" aria-label="Close Case Study">✕</button>
+
+      <div class="modal-header-media">
+        <img id="modal-img" src="" alt="Project Banner" />
+        <div class="modal-header-gradient"></div>
+      </div>
+
+      <div class="modal-body">
+        <div id="modal-genre" class="modal-genre">Genre</div>
+        <h2 id="modal-title" class="modal-title">Project Title</h2>
+        <p id="modal-tagline" class="modal-tagline">Project Tagline</p>
+
+        <div id="modal-tags" class="modal-tags">
+          <!-- Tech badges injected here -->
+        </div>
+
+        <h3 class="modal-section-title">Overview</h3>
+        <p id="modal-overview" class="modal-text"></p>
+
+        <h3 class="modal-section-title">My Role & Responsibilities</h3>
+        <p id="modal-role" class="modal-text" style="color: var(--text-highlight); font-weight: 500;"></p>
+
+        <h3 class="modal-section-title">Key Features</h3>
+        <ul id="modal-features" class="case-study-features">
+          <!-- Key features injected here -->
+        </ul>
+
+        <h3 class="modal-section-title">Technical Architecture & Highlights</h3>
+        <div id="modal-highlights" class="modal-highlights-grid">
+          <!-- Architectural boxes injected here -->
+        </div>
+
+        <div class="modal-challenge-box">
+          <h4>Technical Challenge & Solution</h4>
+          <p><strong>Challenge:</strong> <span id="modal-challenge"></span></p>
+          <p style="margin-top: 0.5rem;"><strong>Solution:</strong> <span id="modal-solution"></span></p>
+        </div>
+
+        <div id="modal-actions" class="modal-footer-actions">
+          <!-- Play / Demo / Itch links injected here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-copy">
+        © 2026 <strong>Faisal Noushad</strong> — Unity Game Developer. Built with modern HTML5, CSS3 & JavaScript.
+      </div>
+      <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top" title="Back to top">
+        ↑
+      </button>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/projects-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
