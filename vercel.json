@@ -1,4 +1,22 @@
 {
+  "rewrites": [
+    {
+      "source": "/assets/resume/Faisal-Noushad-cv.pdf",
+      "destination": "/assets/resume/Faisal-Noushad-CV.pdf"
+    },
+    {
+      "source": "/Faisal-Noushad-cv.pdf",
+      "destination": "/Faisal-Noushad-CV.pdf"
+    },
+    {
+      "source": "/resume",
+      "destination": "/assets/resume/Faisal-Noushad-CV.pdf"
+    },
+    {
+      "source": "/cv",
+      "destination": "/assets/resume/Faisal-Noushad-CV.pdf"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
