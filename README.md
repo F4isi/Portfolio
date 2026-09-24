@@ -39,7 +39,7 @@ Portfolio/
     │   ├── chess.png
     │   └── ... (game thumbnails)
     └── resume/
-        └── Faisal_Noushad_Unity_Developer_Resume.pdf  # Downloadable CV
+        └── FaisalNoushad_CV.pdf  # Downloadable CV
 ```
 
 ---
@@ -151,7 +151,7 @@ If you prefer deploying directly from your terminal:
 
 ### 2. How to Update Your Resume
 1. Export your latest CV as a PDF file.
-2. Rename it to `Faisal_Noushad_Unity_Developer_Resume.pdf`.
+2. Rename it to `FaisalNoushad_CV.pdf`.
 3. Replace the existing file inside `assets/resume/`.
 4. Commit and push to GitHub (Vercel will update automatically!).
 
